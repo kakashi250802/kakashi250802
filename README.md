@@ -55,7 +55,7 @@
 <p align="center">
   <a href="mailto:ngoduong37na@gmail.com"><img src="svg/buttons/email.svg" height="52" alt="Email" /></a>
   &nbsp;
-  <a href="https://facebook.com/duongchuc1205"><img src="svg/buttons/facebook.svg" height="52" alt="Facebook" /></a>
+  <a href="https://www.facebook.com/im.duonn202/"><img src="svg/buttons/facebook.svg" height="52" alt="Facebook" /></a>
   &nbsp;
   <a href="https://instagram.com/duongchuc1205"><img src="svg/buttons/instagram.svg" height="52" alt="Instagram" /></a>
 </p>
