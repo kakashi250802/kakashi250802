@@ -508,15 +508,44 @@ def soar_card():
     return svg(w, h, card(w, h, inner, "p", defs=defs), css, "Soar - a GPU-native mobile UI engine")
 
 
+# The parts of Soar shown under the featured card: (file slug, title,
+# subtitle, icon, color, description lines, tags, link).
+SOAR_INSTALL = "https://kakashi250802.github.io/soar-install/"
 PROJECTS = [
-    ("sleep-tracker-backend", "😴", "#34d399", ["REST backend for a sleep tracking app,", "built with NestJS and TypeScript."], ["NestJS", "TypeScript"]),
-    ("tiktokserver", "🔎", "#f472b6", ["Fetches public TikTok profile stats by", "username or ID, no login or API key."], ["Python", "Scraping"]),
-    ("SlackClone", "💬", "#a78bfa", ["A Slack-style team chat built with", "React, Redux Toolkit and Firebase."], ["React", "Redux", "Firebase"]),
-    ("spotifyclone", "🎵", "#4ade80", ["A Spotify-style music player UI built", "with Next.js and Tailwind CSS."], ["Next.js", "Tailwind"]),
+    ("soar-install", "soar-install", "github.com/kakashi250802/soar-install", "📦", "#34d399",
+     ["One-line installer for the Soar CLI, the desktop", "host and the VS Code extension."],
+     ["Shell", "PowerShell", "VS Code"], "https://github.com/kakashi250802/soar-install"),
+    ("soar-compiler-vm", "Compiler & VM", "soar-compiler · soar-vm", "🧠", "#a78bfa",
+     [".soar (typed TSX) compiled to a signed bundle,", "run on a verified register VM with signals."],
+     ["Rust", "oxc", "Bytecode"], SOAR_INSTALL),
+    ("soar-renderer", "GPU renderer", "soar-render · soar-layout · soar-text", "🎨", "#f472b6",
+     ["Instanced SDF drawing on wgpu, Taffy layout and", "a glyph atlas. Precompiled shaders."],
+     ["wgpu", "WGSL", "Metal", "Vulkan"], SOAR_INSTALL),
+    ("soar-ota-aot", "OTA + AOT", "soar-ota · soar-aot", "🛰️", "#fb923c",
+     ["Ships logic and UI over the air as signed data;", "unchanged functions keep running native code."],
+     ["zstd", "ed25519", "AOT"], SOAR_INSTALL),
 ]
 
 
-def project_card(name, icon, color, desc, tags, index):
+# Older projects, hidden for now and kept to bring back later. Their cards are
+# still in svg/projects/; to show one again, uncomment it here, move it into
+# PROJECTS and uncomment its <a> tag in README.md.
+# OLD_PROJECTS = [
+#     ("sleep-tracker-backend", "sleep-tracker-backend", "github.com/kakashi250802/sleep-tracker-backend", "😴", "#34d399",
+#      ["REST backend for a sleep tracking app,", "built with NestJS and TypeScript."],
+#      ["NestJS", "TypeScript"], "https://github.com/kakashi250802/sleep-tracker-backend"),
+#     ("tiktokserver", "tiktokserver", "github.com/kakashi250802/tiktokserver", "🔎", "#f472b6",
+#      ["Fetches public TikTok profile stats by", "username or ID, no login or API key."],
+#      ["Python", "Scraping"], "https://github.com/kakashi250802/tiktokserver"),
+#     ("SlackClone", "SlackClone", "github.com/kakashi250802/SlackClone", "💬", "#a78bfa",
+#      ["A Slack-style team chat built with", "React, Redux Toolkit and Firebase."],
+#      ["React", "Redux", "Firebase"], "https://github.com/kakashi250802/SlackClone"),
+#     ("spotifyclone", "spotifyclone", "github.com/kakashi250802/spotifyclone", "🎵", "#4ade80",
+#      ["A Spotify-style music player UI built", "with Next.js and Tailwind CSS."],
+#      ["Next.js", "Tailwind"], "https://github.com/kakashi250802/spotifyclone"),
+# ]
+
+def project_card(slug, name, subtitle, icon, color, desc, tags, link, index):
     w, h = 590, 210
     css = ".float{animation:bob 3.5s ease-in-out infinite}"
     inner = (
@@ -525,7 +554,7 @@ def project_card(name, icon, color, desc, tags, index):
         f'<rect x="32" y="32" width="60" height="60" rx="16" fill="{color}" fill-opacity=".15" stroke="{color}" stroke-opacity=".6"/>'
         f'<text x="62" y="72" font-size="28" text-anchor="middle">{icon}</text></g>'
         f'<text x="110" y="58" font-size="22" font-weight="800" fill="{TEXT}">{esc(name)}</text>'
-        f'<text x="110" y="82" font-size="13" fill="{DIM}" class="mono">github.com/{USER}/{esc(name)}</text>'
+        f'<text x="110" y="82" font-size="13" fill="{DIM}" class="mono">{esc(subtitle)}</text>'
         + "".join(f'<text x="32" y="{126 + i * 22}" font-size="15" fill="#cbd5e1">{esc(t)}</text>' for i, t in enumerate(desc))
         + pills(32, 164, tags, color)
         + f'<text x="558" y="182" font-size="20" fill="{color}" text-anchor="end">↗</text>'

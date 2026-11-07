@@ -21,6 +21,16 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/kakashi250802/soar-install"><img src="svg/projects/soar-install.svg" width="49%" alt="soar-install" /></a>
+  <a href="https://kakashi250802.github.io/soar-install/"><img src="svg/projects/soar-compiler-vm.svg" width="49%" alt="Compiler & VM" /></a>
+</p>
+<p align="center">
+  <a href="https://kakashi250802.github.io/soar-install/"><img src="svg/projects/soar-renderer.svg" width="49%" alt="GPU renderer" /></a>
+  <a href="https://kakashi250802.github.io/soar-install/"><img src="svg/projects/soar-ota-aot.svg" width="49%" alt="OTA + AOT" /></a>
+</p>
+
+<!-- Older projects, hidden for now; uncomment to show them again.
+<p align="center">
   <a href="https://github.com/kakashi250802/sleep-tracker-backend"><img src="svg/projects/sleep-tracker-backend.svg" width="49%" alt="sleep-tracker-backend" /></a>
   <a href="https://github.com/kakashi250802/tiktokserver"><img src="svg/projects/tiktokserver.svg" width="49%" alt="tiktokserver" /></a>
 </p>
@@ -28,6 +38,7 @@
   <a href="https://github.com/kakashi250802/SlackClone"><img src="svg/projects/SlackClone.svg" width="49%" alt="SlackClone" /></a>
   <a href="https://github.com/kakashi250802/spotifyclone"><img src="svg/projects/spotifyclone.svg" width="49%" alt="spotifyclone" /></a>
 </p>
+-->
 
 <p align="center">
   <img src="svg/live/stats.svg" width="100%" alt="Live GitHub stats" />
