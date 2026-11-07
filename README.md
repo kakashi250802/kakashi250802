@@ -30,11 +30,11 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/kakashi250802/kakashi250802/output/stats.svg" width="100%" alt="Live GitHub stats" />
+  <img src="https://raw.githubusercontent.com/kakashi250802/kakashi250802/refs/heads/output/stats.svg" width="100%" alt="Live GitHub stats" />
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/kakashi250802/kakashi250802/output/activity.svg" width="100%" alt="Contribution activity" />
+  <img src="https://raw.githubusercontent.com/kakashi250802/kakashi250802/refs/heads/output/activity.svg" width="100%" alt="Contribution activity" />
 </p>
 
 <p align="center">
