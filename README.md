@@ -1,7 +1,7 @@
 <!--
   Every image here is hand-made: run `python3 scripts/profile_art.py static`
   to redraw the art in svg/. The live stats are redrawn daily by
-  .github/workflows/profile-images.yml and published to the `output` branch.
+  .github/workflows/profile-images.yml into svg/live/.
 -->
 
 <p align="center">
@@ -30,11 +30,11 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/kakashi250802/kakashi250802/refs/heads/output/stats.svg" width="100%" alt="Live GitHub stats" />
+  <img src="svg/live/stats.svg" width="100%" alt="Live GitHub stats" />
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/kakashi250802/kakashi250802/refs/heads/output/activity.svg" width="100%" alt="Contribution activity" />
+  <img src="svg/live/activity.svg" width="100%" alt="Contribution activity" />
 </p>
 
 <p align="center">
