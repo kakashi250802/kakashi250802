@@ -286,7 +286,7 @@ def hero():
         '<animate attributeName="r" values="5;15" dur="1.8s" repeatCount="indefinite"/>'
         '<animate attributeName="opacity" values=".9;0" dur="1.8s" repeatCount="indefinite"/></circle>'
         f'<text x="118" y="81" font-size="15" fill="#cbd5e1">{esc(status)}</text>'
-        f'<text x="80" y="150" font-size="24" fill="{MUTED}">Xin chào 👋 mình là</text>'
+        f'<text x="80" y="150" font-size="24" fill="{MUTED}">Hi there 👋 I’m</text>'
         '<text x="80" y="238" font-size="92" font-weight="800" fill="url(#name)" filter="url(#soft)" opacity=".55">duonnn</text>'
         '<text x="80" y="238" font-size="92" font-weight="800" fill="url(#name)">duonnn</text>'
         f"{roles}"
